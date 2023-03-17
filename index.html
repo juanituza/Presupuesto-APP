@@ -46,13 +46,20 @@
       </div>
     </div>
     <div>
-      <form action="" id="forma">
+      <form action="" id="forma" onsubmit="return false;">
         <div class="agregar">
-          <div class="agregar-contenedor">
+          <div class="agregar_contenedor">
             <select name="tipo" id="tipo" class="agregar_tipo">
-              <option value="ingreso" selected>Ingreso</option>
-              <option value="egreso">Egreso</option>
+              <option value="ingreso" selected>+</option>
+              <option value="egreso">-</option>
             </select>
+            <input type="text" class="agregar_descripcion"
+            placeholder="Agregar descripcion" id="descripcion"/>
+            <input type="number" class="agregar_valor"
+            placeholder="Valor" id="valor" step="any"/>
+            <button class="agregar_btn" id="button" onclick="agregarDato()">
+              <i class="fa-regular fa-circle-check"></i>
+            </button>
           </div>
         </div>
       </form>
